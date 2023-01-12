@@ -106,7 +106,7 @@ module.exports = {
             template: './public/index.html', // 源html
             filename: 'index.html', // 输出名
             inject: 'body', // script位置
-            scriptLoading: 'blocking', // 异步加载js
+            scriptLoading: 'defer', // 异步加载js
         }),
         isPrd && new BundleAnalyzerPlugin(),
         isPrd && new MiniCssExtractPlugin({
@@ -119,26 +119,27 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
         alias: {
-            '@pages': path.resolve(__dirname, './app/pages'),
-            '@components': path.resolve(__dirname, './app/components'),
-            '@config': path.resolve(__dirname, './app/config')
+            '@pages': path.resolve(__dirname, './src/pages'),
+            '@components': path.resolve(__dirname, './src/components'),
+            '@mock': path.resolve(__dirname, './src/mock'),
+            '@common': path.resolve(__dirname, './src/common'),
         }
     },
     devServer: {
-        // host: '0.0.0.0',
-        host: '127.0.0.1',
+        host: '0.0.0.0',
+        // host: '127.0.0.1',
         hot: true,
-        port: 3000,
+        port: 8080,
         open: true,
         historyApiFallback: true,
         // https: true,
-        proxy: {
-            '/api': {
-                target: 'http://127.0.0.1:443', // Server
-                changeOrigin: true,
-                pathRewrite: { '^/api': '' }
-            },
-        }
+        // proxy: {
+        //     '/api': {
+        //         target: 'http://127.0.0.1:443', // Server
+        //         changeOrigin: true,
+        //         pathRewrite: { '^/api': '' }
+        //     },
+        // }
     },
     devtool: isPrd ? false : 'inline-source-map',
     performance: false,

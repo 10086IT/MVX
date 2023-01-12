@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkusersores=self.webpackChunkusersores||[]).push([[64],{84064:function(e,s,u){u.r(s);var r=u(67294),n=u(43889),t=u(36112);s.default=function(){return r.createElement(t.Z9,{menus:n.w})}}}]);

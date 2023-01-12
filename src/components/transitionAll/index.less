@@ -1,0 +1,15 @@
+@keyframes pageIn {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.transition-all {
+  min-height: 100%;
+  //transition: all .3s ease 0s;
+  animation: pageIn .3s ease 0s;
+  transform: translateX(0);
+}
+

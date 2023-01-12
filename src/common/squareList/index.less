@@ -1,0 +1,53 @@
+.square-list {
+  font-size: 12px;
+  padding-bottom: 16px;
+  &-header {
+    font-size: 18px;
+    line-height: 26px;
+    &>span {
+      color: #9533d7;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+  }
+  &-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  &-item {
+    flex-shrink: 0;
+    position: relative;
+    margin-bottom: 4.5em;
+    min-width: 31.3%;
+    padding-top: 33%;
+    &-badge {
+      --top: calc(100% - 10px);
+      --right: 50%;
+      --color: #9533d7;
+      color: #333333;
+      font-size: 22px;
+    }
+  }
+  &-description {
+    position: absolute;
+    bottom: -4.5em;
+    height: 4.5em;
+    left: 0;
+    width: 100%;
+  }
+  &-badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+}

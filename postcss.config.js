@@ -24,7 +24,7 @@ module.exports = {
     // }
 
     "postcss-plugin-px2rem": {
-      rootValue: 40,
+      rootValue: 30,
       unitPrecision: 5,
       propList:["*"],
       // propList: ['font', 'font-size', 'line-height', 'letter-spacing'],
