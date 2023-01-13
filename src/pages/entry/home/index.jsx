@@ -1,7 +1,6 @@
 import React from 'react';
 import {Page} from "@components";
 import {SquareList, TabList} from '@common';
-import {useNavigate} from 'react-router-dom';
 import {
     ArrowDownCircleOutline, SearchOutline,
 } from 'antd-mobile-icons'
@@ -10,11 +9,9 @@ import {songs, songSquare, tabs} from "@mock";
 import {Footer} from "antd-mobile";
 
 const Home = React.memo(() => {
-    const router = useNavigate();
 
-    const toPage = (options) => {
-        const {key} = options;
-        router(key, options);
+    const toPage = () => {
+
     }
 
     const openSearchModal = () => {
@@ -49,7 +46,6 @@ const Home = React.memo(() => {
                     <SquareList data={songSquare} title='方向' />
                 </div>
            </div>
-
             <Footer content='@ 2023 by github user 10086IT'></Footer>
         </Page>
     )

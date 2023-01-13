@@ -14,7 +14,7 @@ import './index.less';
 
 
 export default function Entry() {
-    const [activeKey, setActiveKey] = React.useState('2');
+    const [activeKey, setActiveKey] = React.useState('3');
     const swiperRef = React.useRef();
     const [activeArr, setActiveArr] = React.useState([]);
     const pageMainRef = React.useRef([Home, School, Writers, Me]);

@@ -15,7 +15,7 @@ const renderSafeArea = (position) => {
 function App() {
     return <React.StrictMode>
         {renderSafeArea('top')}
-        <RouterProvider router={routers}/>
+        <RouterProvider router={routers} />
         {renderSafeArea('bottom')}
     </React.StrictMode>
 }
